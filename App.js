@@ -49,10 +49,15 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
-            headerStyle: { backgroundColor: GlobalStyles.colors.primary800 },
-            title: "PocketChat",
+            // headerStyle: { backgroundColor: GlobalStyles.colors.primary800 },
+            // title: "PocketChat",
+            headerShown: false,
           }}>
-          <Stack.Screen name="MainScreen" component={CommunicationOptions} />
+          <Stack.Screen
+            name="MainScreen"
+            component={CommunicationOptions}
+            screenOptions={{ backgroundColor: GlobalStyles.colors.neutral200 }}
+          />
           <Stack.Screen name="ManageItem" component={ManageItem} />
         </Stack.Navigator>
       </NavigationContainer>
